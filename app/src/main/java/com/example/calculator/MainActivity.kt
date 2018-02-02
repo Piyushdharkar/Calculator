@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         R.id.eightButton -> "8"
         R.id.nineButton -> "9"
         R.id.zeroButton -> "0"
+        R.id.dotButton -> "."
 
         R.id.plus -> "+"
         R.id.minus -> "-"
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         eightButton.setOnClickListener(addCharToTextView)
         nineButton.setOnClickListener(addCharToTextView)
         zeroButton.setOnClickListener(addCharToTextView)
+        dotButton.setOnClickListener(addCharToTextView)
 
         plus.setOnClickListener(addCharToTextView)
         minus.setOnClickListener(addCharToTextView)
