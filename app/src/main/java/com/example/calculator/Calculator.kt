@@ -23,7 +23,7 @@ class Calculator(private val infix: String) {
     }
 
     private fun isNumber(token: String): Boolean {
-        token.toFloatOrNull() ?: return false
+        token.toDoubleOrNull() ?: return false
         return true
     }
 
@@ -77,12 +77,12 @@ class Calculator(private val infix: String) {
         }
     }
 
-    private fun performOperation(a: Float, b: Float, operation: String): Float = when(operation) {
+    private fun performOperation(a: Double, b: Double, operation: String): Double = when(operation) {
         "+" -> a + b
         "-" -> a - b
         "/" -> a / b
         "x" -> a * b
-        else -> 0.0f
+        else -> 0.0
     }
 
     private fun evaluation(): String {
@@ -92,8 +92,8 @@ class Calculator(private val infix: String) {
             if (isNumber(token)) {
                 stack.push(token)
             } else {
-                val b = stack.pop().toFloat()
-                val a = stack.pop().toFloat()
+                val b = stack.pop().toDouble()
+                val a = stack.pop().toDouble()
                 stack.push(performOperation(a, b, token).toString())
             }
         }
