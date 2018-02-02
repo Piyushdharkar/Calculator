@@ -77,12 +77,36 @@ class Calculator(private val infix: String) {
         }
     }
 
+    private fun performOperation(a: Float, b: Float, operation: String): Float = when(operation) {
+        "+" -> a + b
+        "-" -> a - b
+        "/" -> a / b
+        "x" -> a * b
+        else -> 0.0f
+    }
+
+    private fun evaluation(): String {
+        val stack = Stack<String>()
+
+        for (token in postfix) {
+            if (isNumber(token)) {
+                stack.push(token)
+            } else {
+                val b = stack.pop().toFloat()
+                val a = stack.pop().toFloat()
+                stack.push(performOperation(a, b, token).toString())
+            }
+        }
+
+        return stack.pop()
+    }
+
     fun getAnswer(): String {
         val expression = getTokens()
         infixToPostfix(expression)
 
 
-        return postfix.toString()
+        return evaluation()
     }
 
 
