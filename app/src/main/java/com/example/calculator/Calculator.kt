@@ -2,9 +2,6 @@ package com.example.calculator
 
 import java.util.*
 import kotlin.collections.ArrayList
-import java.nio.file.Files.size
-
-
 
 
 class Calculator(private val infix: String) {
@@ -105,10 +102,8 @@ class Calculator(private val infix: String) {
         val expression = getTokens()
         infixToPostfix(expression)
 
-
         return evaluation()
     }
-
 
 
 

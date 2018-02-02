@@ -57,11 +57,12 @@ class MainActivity : AppCompatActivity() {
         multiply.setOnClickListener(addCharToTextView)
         divide.setOnClickListener(addCharToTextView)
 
-        try {
-            equalTo.setOnClickListener({ textView.text = Calculator(textView.text.toString()).getAnswer() })
-        } catch (e: Exception) {
-            Toast.makeText(applicationContext, "Invalid expression", Toast.LENGTH_SHORT).show()
-        }
+            equalTo.setOnClickListener({ try {
+                textView.text = Calculator(textView.text.toString()).getAnswer()
+            } catch (e: Exception) {
+                Toast.makeText(applicationContext, "Error", Toast.LENGTH_SHORT).show()
+            } })
+
         clearButton.setOnClickListener({textView.text = ""})
         backspaceButton.setOnClickListener({textView.text = if (textView.text != "")
                 textView.text.toString().substring(0, textView.text.toString().length - 1)
