@@ -46,7 +46,35 @@ class Calculator(private val infix: String) {
     }
 
     private fun infixToPostfix(expression: ArrayList<String>) {
+        val stack = Stack<String>()
 
+        for (token in expression) {
+            if (isNumber(token)) {
+                postfix.add(token)
+            } else if (token == "(") {
+                stack.push(token)
+            } else if (token == ")") {
+                while (stack.peek() != "(") {
+                    postfix.add(stack.pop())
+                }
+                stack.pop()
+            } else {
+                if (stack.isEmpty()) {
+                    stack.push(token)
+                } else if (getWeight(stack.peek()) >= getWeight(token)) {
+                    while (!stack.isEmpty() && getWeight(stack.peek()) >= getWeight(token)) {
+                        postfix.add(stack.pop())
+                    }
+                    stack.push(token)
+                } else {
+                    stack.push(token)
+                }
+            }
+        }
+
+        while (!stack.isEmpty()) {
+            postfix.add(stack.pop())
+        }
     }
 
     fun getAnswer(): String {
