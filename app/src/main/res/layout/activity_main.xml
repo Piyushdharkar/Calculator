@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="258dp"
         android:fontFamily="cursive"
+        android:textColor="@color/displayColor"
         android:gravity="top|left"
         android:text=""
         android:textSize="50sp"
@@ -39,6 +40,7 @@
 
         <Button
             android:id="@+id/oneButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -47,6 +49,7 @@
 
         <Button
             android:id="@+id/twoButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -55,6 +58,7 @@
 
         <Button
             android:id="@+id/threeButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -63,6 +67,7 @@
 
         <Button
             android:id="@+id/fourButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -71,6 +76,7 @@
 
         <Button
             android:id="@+id/fiveButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -79,6 +85,7 @@
 
         <Button
             android:id="@+id/sixButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -87,6 +94,7 @@
 
         <Button
             android:id="@+id/sevenButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="0"
@@ -95,6 +103,7 @@
 
         <Button
             android:id="@+id/eightButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -103,6 +112,7 @@
 
         <Button
             android:id="@+id/nineButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -124,6 +134,7 @@
 
         <Button
             android:id="@+id/clearButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -131,6 +142,7 @@
 
         <Button
             android:id="@+id/backspaceButton"
+            android:background="@color/buttonColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -158,30 +170,35 @@
 
         <Button
             android:id="@+id/plus"
+            android:background="@color/buttonColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="+" />
 
         <Button
             android:id="@+id/minus"
+            android:background="@color/buttonColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="-" />
 
         <Button
             android:id="@+id/multiply"
+            android:background="@color/buttonColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="x" />
 
         <Button
             android:id="@+id/divide"
+            android:background="@color/buttonColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="/" />
 
         <Button
             android:id="@+id/equalTo"
+            android:background="@color/buttonColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="=" />
@@ -190,13 +207,15 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="144dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="488dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/zeroButton"
@@ -204,6 +223,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="0"
+            android:background="@color/buttonColor"
             android:text="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -219,6 +239,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="0"
+            android:background="@color/buttonColor"
             android:text="." />
 
         <Button
@@ -227,6 +248,7 @@
             android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_row="1"
+            android:background="@color/buttonColor"
             android:text="(" />
 
         <Button
@@ -235,6 +257,7 @@
             android:layout_height="wrap_content"
             android:layout_column="1"
             android:layout_row="1"
+            android:background="@color/buttonColor"
             android:text=")" />
 
     </GridLayout>
